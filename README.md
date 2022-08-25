@@ -1,6 +1,6 @@
 # Modular-14
 
-Backtest, tune and evaluate an SVM machine learning trading algorithm and then compare it against the results of a separately chosen ML model of my choice. The machine learning model that I chose to incorporate into the trading algorithm was a Stochastic Gradient Descent (SGD) model. The analysis is below.
+Backtest, tune and evaluate an SVM machine learning trading algorithm and then compare it against the results of a separately chosen ML model of my choice. The machine learning model that I chose to incorporate into the trading algorithm was a Stochastic Gradient Descent (SGD) model.
 
 ### Tuning the Baseline ML Algorithm
 The first step in tuning the baseline ML algorithm was to test different sized training windows for the model and analyze the results. 
@@ -10,9 +10,7 @@ The baseline training window for the model was 3-months. During the tuning proce
 + 6 Month Training Window
 + 12 Month Training Window
 
-Once the model was fit to the training data, I plotted the cumulative returns to a plot with a set y-scale of .7 to 2.0 so that I could compare the results of each model.
-
-The result was that the 6-month training window seemed to yield the most effective model long-term, however, it had a long period of performance that was less than the actual returns so it also seemed to be the most risky model to use. The baseline plot (3M Training window) returned better results than the 1M training window plot but both of these were quite similar and seemed to follow closely along with the actual returns, just a bit higher. When I expanded the training window to 12-months, the model seemed to overfit the data and returned zero sell signals. For this reason the strategy returns mirred the actual returns exactly. 
+The result was that the 6-month training window seemed to yield the most effective model long-term, however, it had a long period of performance that was less than the actual returns so it also seemed to be the most risky model to use. The baseline plot returned better results than the 1M training window plot but both of these were quite similar and seemed to follow closely along with the actual returns, just a bit higher. When I expanded the training window to 12-months, the model seemed to overfit the data and returned zero sell signals. For this reason the strategy returns mirred the actual returns exactly. 
 
 The second step in the tuning process was to test different simple moving average windows and compare the results.
 
